@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>614368503988-k2qg6blfhvgbag580taqsrcs2rjlll25.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.614368503988-k2qg6blfhvgbag580taqsrcs2rjlll25</string>
+	<key>ANDROID_CLIENT_ID</key>
+	<string>614368503988-09a6v1i285i3a7ul1regfvggfg95qrro.apps.googleusercontent.com</string>
+	<key>API_KEY</key>
+	<string>AIzaSyC-7ud6T9XKZsVha0wktHWWSkdsh-ReFx4</string>
+	<key>GCM_SENDER_ID</key>
+	<string>614368503988</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>org.reactjs.native.example.podcasttonight</string>
+	<key>PROJECT_ID</key>
+	<string>podcast-4bedf</string>
+	<key>STORAGE_BUCKET</key>
+	<string>podcast-4bedf.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:614368503988:ios:09065d614b32c5e478cfe1</string>
+	<key>DATABASE_URL</key>
+	<string>https://podcast-4bedf-default-rtdb.asia-southeast1.firebasedatabase.app</string>
+</dict>
+</plist>
