@@ -6,6 +6,7 @@ import { useNavigation } from '@react-navigation/native';
 import { ActivityIndicator } from 'react-native';
 import { MakeCompleteUrl } from '../Helper/MakeCompleteUrl';
 import { scale } from 'react-native-size-matters';
+import CustomButtons from '../Items/CustomButtons';
 
 const SingleReel = ({ item, index, currentIndex, setCurrentIndex, icon }) => {
     console.log(item.video)
@@ -79,8 +80,13 @@ const SingleReel = ({ item, index, currentIndex, setCurrentIndex, icon }) => {
                     }}
                 >
                     {
-                        icon ? <IdentificationIcon onPress={() => navigation.navigate("Profile", { userid: item?.userid })} size={45} style={{ color: '#ccc', bottom: scale(110), position: 'absolute', right: scale(25) }} /> :
-                            <ArrowLeftIcon onPress={() => navigation.goBack()} size={35} style={{ color: '#F40000', position: 'absolute', left: scale(25), top: scale(15) }} />
+                        icon ? <IdentificationIcon onPress={() => navigation.navigate("Profile", { userid: item?.userid })} size={45} style={{ color: '#F40000', bottom: scale(110), position: 'absolute', right: scale(25) }} /> :
+                        <View style={{position: 'absolute',left: 0, right: 0, bottom: scale(50), justifyContent: 'center', alignItems: 'center'}}>
+                        <Text onPress={() => navigation.goBack()} className='text-white_color bg-red_darker py-1 px-4 font-semibold'>
+                            Back
+                        </Text>
+                      </View>
+                            // <ArrowLeftIcon onPress={() => navigation.goBack()} size={35} style={{ color: '#F40000', position: 'absolute', right: scale(25), bottom: scale(15) }} />
                     }
                 </TouchableOpacity>
             </TouchableOpacity>

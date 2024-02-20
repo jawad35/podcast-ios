@@ -7,6 +7,7 @@ import Categories from '../../components/podcast/Categories'
 import UserProfile from '../../components/podcast/UserProfile'
 import { useSelector } from 'react-redux'
 import PodcastRadio from '../../components/podcast/PodcastRadio'
+import { scale } from 'react-native-size-matters'
 
 export default function PodHome({ navigation }) {
   return (
@@ -15,7 +16,7 @@ export default function PodHome({ navigation }) {
       <View>
         <View className='flex-row justify-items-center justify-center m-2 space-x-2'>
           <View className='rounded-lg flex-1 bg-white_color text-black' style={[ShadowCardStyle.card, ShadowCardStyle.elevation]}>
-            <TextInput className='text-black' placeholderTextColor={'black'} placeholder='Search...' />
+            <TextInput style={{paddingHorizontal:scale(10), paddingVertical:scale(15)}} className='text-black' placeholderTextColor={'black'} placeholder='Search...' />
           </View>
           <View onTouchStart={() => navigation.openDrawer()} className='justify-items-center justify-center'>
             <UserProfile />

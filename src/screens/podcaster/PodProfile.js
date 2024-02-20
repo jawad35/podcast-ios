@@ -43,6 +43,7 @@ const PodProfile = ({ route }) => {
         'Content-Type': 'application/json',
       }
     });
+    console.log(response.data.user)
     if (response.data.success) {
       SetUserData(response.data?.user[0])
       const isExist = CheckIsFollowed(response.data?.user?.followers, podcastData?.user?.email)
@@ -144,11 +145,12 @@ const PodProfile = ({ route }) => {
         console.error('Upload error:', error);
     }
 };
+console.log(UserData)
   return (
     <SafeAreaView className='bg-black flex-1'>
       <HeaderTitle icon={true} title={'Profile'} />
       {
-        podcastData?.user._id === route?.params?.userid && <View className='flex items-end absolute z-10' style={{ top: scale(60), right: scale(20) }}>
+        podcastData?.user._id === route?.params?.userid && <View className='flex items-end' style={{margin:scale(15)}}>
           <PencilSquareIcon onPress={() => navigation.navigate("UpdatePodProfile")} size={scale(25)} color={'white'} />
         </View>
       }

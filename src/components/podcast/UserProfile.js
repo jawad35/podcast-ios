@@ -4,12 +4,13 @@ import { responsiveHeight, responsiveWidth } from 'react-native-responsive-dimen
 import { useSelector } from 'react-redux'
 import { defaultProfile } from '../../utils/Constants'
 import { MakeCompleteUrl } from '../Helper/MakeCompleteUrl'
+import { scale } from 'react-native-size-matters'
 
 const UserProfile = () => {
     const podcastData = useSelector(state => state.userData)
     return (
         <Image source={{ uri: podcastData?.user?.avatar ? MakeCompleteUrl(podcastData?.user?.avatar) : defaultProfile }}
-            style={{ height: responsiveHeight(5.5), width: responsiveWidth(10.5) }}
+            style={{ height: scale(45), width: scale(45) }}
             resizeMode='cover'
             className='rounded-full'
         />

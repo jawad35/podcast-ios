@@ -117,10 +117,10 @@ const CreateShortVideos = () => {
   };
   console.log(video.uri)
   return (
-    <ScrollView style={{ flex: 1 }} className="bg-black">
+    <SafeAreaView className='bg-black flex-1'>
+      <ScrollView style={{ flex: 1 }} className="bg-black">
       <HeaderTitle icon={true} title={'Create Short'} />
 
-      <SafeAreaView>
         <CustomShadow>
           <TextInput
             value={caption}
@@ -128,11 +128,10 @@ const CreateShortVideos = () => {
             textAlignVertical='top'
             className='rounded-lg  mt-5'
             onChangeText={text => setCaption(text)}
-            multiline={true}
             numberOfLines={5}
-            maxLength={10}
+            maxLength={30}
             placeholderTextColor={'black'}
-            style={{ color: 'black', paddingHorizontal: scale(15), backgroundColor: 'white' }}
+            style={{ color: 'black', paddingHorizontal: scale(10), paddingVertical:scale(15), backgroundColor: 'white' }}
             underlineColorAndroid='transparent'
           />
         </CustomShadow>
@@ -166,31 +165,31 @@ const CreateShortVideos = () => {
           />
         </CustomShadow>
         <View className='flex-1 justify-center items-center'>
-          {imageLocalPath && <Image className='rounded-lg' source={{ uri: imageLocalPath }} width={scale(100)} resizeMode='contain' height={scale(100)} />}
+          {imageLocalPath && <Image className='rounded-lg' source={{ uri: imageLocalPath }} width={scale(100)} resizeMode='cover' height={scale(150)} />}
         </View>
         <CustomShadow>
-          <CustomButtons title={'Upload Video Thumbnail'} color={'white_color'} textColor={'black'} onClick={() => openImagePicker()} />
+          <CustomButtons title={'Upload Video Thumbnail'} color={'red_darker'} textColor={'white_color'} onClick={() => openImagePicker()} />
         </CustomShadow>
         <View className='flex-1 justify-center items-center'>
           {
             video && <TouchableOpacity
               className={`m-2 rounded-lg drop-shadow-lg`}
-              style={{ height: responsiveHeight(17), width: responsiveWidth(15) }}
+              style={{ height: scale(150), width: scale(100) }}
             >
               {/* <Text className='text-white_color my-1 bg-red_darker text-center rounded-sm' style={{ fontSize: responsiveFontSize(1.3) }}>Remove</Text> */}
-              <Video style={{ height: '100%' }} paused={false} className='rounded-lg' source={{ uri: video.uri }} width={responsiveWidth(15)} resizeMode='cover' height={responsiveHeight(15)} />
+              <Video style={{ height: '100%' }} paused={false} className='rounded-lg' source={{ uri: video.uri }} resizeMode='cover' />
             </TouchableOpacity>
           }
 
         </View>
         <CustomShadow>
-          <CustomButtons title={'Upload Short'} color={'white_color'} textColor={'black'} onClick={() => openVideoPicker()} />
+          <CustomButtons title={'Upload Short'} color={'red_darker'} textColor={'white_color'} onClick={() => openVideoPicker()} />
         </CustomShadow>
         <CustomShadow>
           <CustomButtons isLoading={isLoading} disable={isLoading} textColor={'white_color'} color={'brown_darker'} title={'Create'} onClick={handleUpload} />
         </CustomShadow>
-      </SafeAreaView>
     </ScrollView>
+    </SafeAreaView>
 
   );
 };

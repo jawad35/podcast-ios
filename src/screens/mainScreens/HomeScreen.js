@@ -1,4 +1,4 @@
-import { Text, View } from 'react-native';
+import { SafeAreaView, Text, View } from 'react-native';
 import { HomeIcon, ClipboardIcon, ArrowTrendingUpIcon, FilmIcon } from 'react-native-heroicons/solid'
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import TrendingPosts from '../podcaster/TrendingPosts';
@@ -41,7 +41,7 @@ export default function HomeScreen() {
   const [active, setActive] = useState('PodHome')
   const redish = '#F40000'
   return (
-    <Tab.Navigator
+      <Tab.Navigator
       initialRouteName='PodHome' screenOptions={screenOptions}>
       <Tab.Screen
         name="PodHome"

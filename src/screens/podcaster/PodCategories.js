@@ -75,7 +75,7 @@ const PodCategories = ({ route }) => {
                 </View>
                 {
                     !podcastData?.user?.email && <View style={{ marginVertical: scale(40) }}>
-                        <CustomButtons onClick={CreatUser} color={'red_darker'} textColor={'white_color'} title={'Done!4'} />
+                        <CustomButtons onClick={CreatUser} color={'red_darker'} textColor={'white_color'} title={'Done!'} />
                     </View>
                 }
             </ScrollView>

@@ -10,6 +10,9 @@ import HeaderTitle from '../../components/podcast/HeaderTitle'
 import { scale } from 'react-native-size-matters'
 import { ApiUrl } from '../../constants/globalUrl'
 import TypeCard from '../../components/podcast/TypeCard'
+import { MakeCompleteUrl } from '../../components/Helper/MakeCompleteUrl';
+
+
 export default function CategoryPodcasts({ navigation, route }) {
     const [data, setData] = useState([]);
     const [filteredData, setFilteredData] = useState([]);
@@ -53,13 +56,14 @@ export default function CategoryPodcasts({ navigation, route }) {
     useEffect(() => {
         GetCategoryPodcast()
     }, [route.params?.category])
+    
     return (
         <SafeAreaView className=' bg-black flex-1'>
             {/* top header */}
             <View>
                 <View className='flex-row justify-items-center justify-center m-2 space-x-2'>
                     <View className='rounded-lg flex-1 bg-white_color text-black' style={[ShadowCardStyle.card, ShadowCardStyle.elevation]}>
-                        <TextInput className='text-black' placeholderTextColor={'black'} placeholder='Search...' />
+                        <TextInput style={{paddingVertical:scale(15)}} className='text-black' placeholderTextColor={'black'} placeholder='Search...' />
                     </View>
                     <View onTouchStart={() => navigation.openDrawer()} className='justify-items-center justify-center'>
                         <UserProfile />
@@ -79,11 +83,15 @@ export default function CategoryPodcasts({ navigation, route }) {
                                 {
                                     filteredData?.length !== 0 ? <View>
                                         {
-                                            filteredData?.map((item, index) => <Image key={index} source={{ uri: item?.podcast?.image }}
+                                            filteredData?.map((item, index) => <View  key={index} className='relative'>
+                                                <Image onPress={() => console.log('cl')} source={{ uri: MakeCompleteUrl(item?.avatar) }}
                                                 style={{ height: scale(300), width: '100%' }}
                                                 resizeMode='cover'
                                                 className='rounded-lg mb-9'
-                                            />)
+                                            />
+                                            <Text onPress={() => navigation.navigate("Profile", { userid: item?._id })} className='absolute bottom-16 left-4 bg-red_darker text-white_color py-1 px-3 font-semibold'>Profile</Text>
+                                            </View>)
+                                            
                                         }
                                     </View> : <View className='flex justify-center items-center'>
                                         <Text className='text-white_color mt-14' >No data found</Text>

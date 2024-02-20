@@ -1,46 +1,55 @@
 {
   "images" : [
     {
+      "filename" : "podcast-logo (40 x 40 px).png",
       "idiom" : "iphone",
       "scale" : "2x",
       "size" : "20x20"
     },
     {
+      "filename" : "podcast-logo (60 x 60 px).png",
       "idiom" : "iphone",
       "scale" : "3x",
       "size" : "20x20"
     },
     {
+      "filename" : "podcast-logo (58 x 58 px).png",
       "idiom" : "iphone",
       "scale" : "2x",
       "size" : "29x29"
     },
     {
+      "filename" : "podcast-logo (87 x 87 px).png",
       "idiom" : "iphone",
       "scale" : "3x",
       "size" : "29x29"
     },
     {
+      "filename" : "podcast-logo (80 x 80 px).png",
       "idiom" : "iphone",
       "scale" : "2x",
       "size" : "40x40"
     },
     {
+      "filename" : "podcast-logo (120 x 120 px).png",
       "idiom" : "iphone",
       "scale" : "3x",
       "size" : "40x40"
     },
     {
+      "filename" : "podcast-logo (120 x 120 px) 1.png",
       "idiom" : "iphone",
       "scale" : "2x",
       "size" : "60x60"
     },
     {
+      "filename" : "podcast-logo (180 x 180 px).png",
       "idiom" : "iphone",
       "scale" : "3x",
       "size" : "60x60"
     },
     {
+      "filename" : "podcast-logo (1024 x 1024 px).png",
       "idiom" : "ios-marketing",
       "scale" : "1x",
       "size" : "1024x1024"

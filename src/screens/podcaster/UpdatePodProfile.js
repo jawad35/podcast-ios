@@ -33,6 +33,7 @@ const UpdatePodProfile = () => {
       }
     });
   };
+  console.log(imageLocalPath, 'hj')
 
   const handleUpdatePodcastImage = async (fileName) => {
     try {
@@ -103,7 +104,7 @@ const UpdatePodProfile = () => {
             placeholder="Full name"
             value={fullname}
             placeholderTextColor={'black'}
-            style={{color:'black', paddingHorizontal:scale(15)}}
+            style={{color:'black', paddingHorizontal:scale(10), paddingVertical:scale(15)}}
             onChangeText={(name) => setFullname(name)}
           />
         </View>
@@ -112,14 +113,14 @@ const UpdatePodProfile = () => {
         </View>
         <View className='flex justify-center items-center mt-9'>
           <Image source={{ uri: imageLocalPath ? imageLocalPath : defaultProfile }}
-            style={{ height: responsiveHeight(25), width: responsiveWidth(50) }}
+            style={{ height: scale(150), width: scale(150) }}
             resizeMode='cover'
             className='rounded-full'
           />
         </View>
         <View className='my-10'>
           <View>
-            <CustomButtons color={'white_color'} textColor={'black'} title={"New Image"} onClick={openImagePicker} />
+            <CustomButtons color={'white_color'} textColor={'white_color'} title={"New Image"} onClick={openImagePicker} />
           </View>
           {
             image &&

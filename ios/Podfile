@@ -1,4 +1,6 @@
 # Resolve react_native_pods.rb with node to allow for hoisting
+require_relative '../node_modules/@react-native-community/cli-platform-ios/native_modules'
+
 require Pod::Executable.execute_command('node', ['-p',
   'require.resolve(
     "react-native/scripts/react_native_pods.rb",
@@ -32,6 +34,8 @@ target 'podcasttonight' do
   pod 'FirebaseCoreInternal', :modular_headers => true
   pod 'GoogleUtilities', :modular_headers => true
   pod 'FirebaseCore', :modular_headers => true
+  pod 'StripeCore', '23.21.2'
+
 
   use_react_native!(
     :path => config[:reactNativePath],

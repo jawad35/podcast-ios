@@ -24,7 +24,7 @@ const Logout = () => {
         <SafeAreaView className='flex-1'>
             <HeaderTitle icon={true} title={"Logout"} />
             <View className='flex-1 justify-center items-center mx-8'>
-                <CustomButtons color={'white_color'} textColor={'black'} title={"Logout"} onClick={handleLogout} />
+                <CustomButtons color={'white_color'} textColor={'white_color'} title={"Logout"} onClick={handleLogout} />
             </View>
         </SafeAreaView>
 
