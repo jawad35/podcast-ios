@@ -2,12 +2,10 @@ import {  Text, Platform,  View } from 'react-native';
 import {HomeIcon, ClipboardIcon, ArrowTrendingUpIcon, FilmIcon } from 'react-native-heroicons/solid'
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { useState } from 'react';
-import PodPosts from '../screens/podcaster/PodPosts';
 import PodHome from '../screens/podcaster/PodHome';
 import PodSuggestions from '../screens/podcaster/PodSuggestions';
 import TrendingPosts from '../screens/podcaster/TrendingPosts';
 
-// Thanks for watching
 const Tab = createBottomTabNavigator();
 const screenOptions = {
   tabBarShowLabel:false,
@@ -47,7 +45,7 @@ export default function Routes() {
             }
           }}
           />
-          <Tab.Screen 
+          {/* <Tab.Screen 
           name="PodPost" 
           component={PodPosts} 
           options={{
@@ -64,7 +62,7 @@ export default function Routes() {
               )
             }
           }}
-          />
+          /> */}
            <Tab.Screen 
           name="SuggestionPosts" 
           component={PodSuggestions} 

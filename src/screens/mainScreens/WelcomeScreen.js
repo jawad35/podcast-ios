@@ -11,6 +11,7 @@ import { useDispatch } from 'react-redux'
 import { ApiUrl } from '../../constants/globalUrl'
 import LottieView from 'lottie-react-native'
 import { ActivityIndicator } from 'react-native'
+import * as AnimateAble from 'react-native-animatable'
 export default function WelcomeScreen() {
     const navigation = useNavigation();
     const dispatch = useDispatch()
@@ -42,7 +43,7 @@ export default function WelcomeScreen() {
     }
     return (
         <SafeAreaView className="flex-1 bg-black">
-            <View className="flex-1 flex justify-around my-4">
+            <AnimateAble.View animation={'slideInDown'} className="flex-1 flex justify-around my-4">
                 <Text
                     onPress={async () => {
                         await GoogleSignin.revokeAccess()
@@ -51,10 +52,10 @@ export default function WelcomeScreen() {
                      Let's Get Started!k
                 </Text>
 
-                <View className="flex-row justify-center">
+                <AnimateAble.View animation="slideInDown" className="flex-row justify-center">
                     <Image source={require("../../assets/icons/podcastpng.png")}
                         style={{ width: responsiveWidth(100), height: responsiveHeight(40) }} />
-                </View>
+                </AnimateAble.View>
                 <View className="space-y-4">
                     <TouchableOpacity
                         onPress={() => navigation.navigate('SignUp')}
@@ -72,7 +73,7 @@ export default function WelcomeScreen() {
                         </TouchableOpacity>
                     </View>
                 </View>
-            </View>
+            </AnimateAble.View>
         </SafeAreaView>
     )
 }

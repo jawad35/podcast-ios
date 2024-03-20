@@ -7,6 +7,8 @@ import { PodCategoriesStyles } from '../../styles/podCategoriesStyle'
 import { useNavigation } from '@react-navigation/native'
 import { useDispatch, useSelector } from 'react-redux'
 import { getPodcastCategory } from '../../redux/SelectedCategorySlice'
+import * as AnimateAble from 'react-native-animatable'
+
 const PodCategories = ({ route }) => {
     const { role } = route?.params
     const podcastData = useSelector(state => state.userData)
